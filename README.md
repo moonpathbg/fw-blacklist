@@ -3,9 +3,9 @@
 Simple script which uses FireHOL's (https://iplists.firehol.org) list of bad IPs and generate iptables firewall.
 
 ## Schedule ##
-It's good to run it once per day to refresh the firewall. Something like this:
+It's good to run it once per day to refresh the firewall. Have something like this in crontab:
 ```
-echo "0 3 * * * /root/fw-blacklist.sh >> /var/log/fw-blacklist.log" | crontab
+0 3 * * * /root/fw-blacklist.sh >> /var/log/fw-blacklist.log
 ```
 Full refresh might take few minutes depending of the PC speed and the size of the list.
 
